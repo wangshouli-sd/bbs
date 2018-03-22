@@ -1,0 +1,31 @@
+<!--{include header.html}-->
+<!--TOP start-->
+<!--{include top.html}-->
+<!--TOP end-->
+
+<!--HEAD start-->
+<!--{include head.html}-->
+<!--HEAD end-->
+
+<!--NOTICE START-->
+<div id="wp" class="wp">
+	<div id="ct" class="wp cl w">
+		<div class="nfl">
+			<div class="f_c altw">
+				<div id="messagetext" class="{$style}">
+				<p>{$msg}，请稍候…… <br />
+				<script type="text/javascript" reload="1">setTimeout("location.href='{$url}';", {$toTime});</script></p>
+				<p class="alert_btnleft"><a href="{$url}">如果你的浏览器没有自动跳转，请点击此链接</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--NOTICE END-->
+
+<!--FOOT start-->
+<!--{include footer.html}-->
+<!--FOOT end-->
+</body>
+</html>
+

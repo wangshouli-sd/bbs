@@ -1,0 +1,126 @@
+<!--{include header.html}-->
+<!--TOP start-->
+<!--{include top.html}-->
+<!--TOP end-->
+
+<!--HEAD start-->
+<!--{include head.html}-->
+<!--HEAD end-->
+
+<!--LIST start-->
+<div id="wp" class="wp">
+	<div id="pt" class="bm cl">
+			<div class="z">
+			<a href="./" class="nvhm" title="{$title}">{$title}</a><em>&raquo;</em><a href="index.php">论坛</a><em>&raquo;</em><a href="index.php?bigid={$bigId}">{$bigName}</a><em>&raquo;</em><a href="list.php?classid={$smallId}">{$smallName}</a>
+			</div>
+	</div>
+	<div class="boardnav">
+		<div id="ct" class="wp cl" style="margin-left:145px">
+			<div id="sd_bdl" class="bdl" style="width:130px;margin-left:-145px">
+				<div class="tbn" id="forumleftside"><h2 class="bdl_h">版块导航</h2>
+					<!--{loop $LTmenu $inde $bk}-->
+					<dl class="a" id="lf_{$bk['cid']}">
+						<dt><a href="javascript:;" title="{$bk['classname']}">{$bk['classname']}</a></dt>
+						<!--{loop $LTsMenu $key $val}-->
+						<!--{if $val['parentid']==$bk['cid']}-->
+						<dd <!--{if $val['cid']==$OnCid}-->class="bdl_a"<!--{/if}-->>
+						<a href="list.php?classid={$val['cid']}" title="{$val['classname']}">{$val['classname']}</a>
+						</dd>
+						<!--{/if}-->
+						<!--{/loop}-->
+					</dl>
+					<!--{/loop}-->
+				</div>
+			</div>
+			
+			<div class="mn">
+			
+				<div class="bm bml pbn">
+					<div class="bm_h cl">
+					<h1 class="xs2">
+					<a href="list.php?classid={$OnCid}">{$OnCname}</a>
+					<span class="xs1 xw0 i">今日: <strong class="xi1">{$JCount}</strong><span class="pipe">|</span>主题: <strong class="xi1">{$zCount}</strong></span></h1>
+					</div>
+					<!--{if !empty($compere)}-->
+					<div class="bm_c cl pbn">
+						
+						<div>
+							版主: <span class="xi2">${getUserName($compere)}</span>
+						</div>
+						
+					</div>
+					<!--{/if}-->
+				</div>
+				
+				<div id="pgt" class="bm bw0 pgs cl">
+				<span class="pgb y"  ><a href="index.php">返&nbsp;回</a></span>
+				<a href="addc.php?classid={$OnCid}" id="newspecial" title="发新帖"><img src="{$domain_resource}/images/pn_post.png" alt="发新帖" /></a></div>
+				
+				<div id="threadlist" class="tl bm bmw">
+				<div class="th">
+				<table cellspacing="0" cellpadding="0">
+				<tr>
+				<th colspan="2">
+				<div class="tf">
+				筛选:
+				<a href="list.php?classid={$classId}" class="xi2">全部</a><span class="pipe">|</span><a href="list.php?classid={$classId}&elite=1" class="xi2">精华</a></div>
+				</th>
+				<td class="by">作者</td>
+				<td class="num">回复/查看</td>
+				<td class="by">最后发表</td>
+				</tr>
+				</table>
+				</div>
+				<div class="bm_c">
+				<form method="post" autocomplete="off" name="moderate" id="moderate" action="">
+				<table summary="forum_2" id="forum_2" cellspacing="0" cellpadding="0">
+					<!--{loop $ListContent $key $val}-->
+						<tr>
+							<td class="icn">
+							<a href="detail.php?id={$val['id']}" title="<!--{if $val['addtime']>$newt}-->有新回复 - <!--{/if}-->新窗口打开" target="_blank"><img src="{$domain_resource}/images/folder_<!--{if $val['addtime']>$newt}-->new<!--{else}-->common<!--{/if}-->.gif" /></a>
+							</td>
+							<th class="<!--{if $val['addtime']>$newt}-->new<!--{else}-->common<!--{/if}-->">
+							 <a href="detail.php?id={$val['id']}" class="xst"  <!--{if !empty($val['style'])}-->style="color:{$val['style']}"<!--{/if}-->>{$val['title']}</a>
+							 <!--{if $val['rate']}-->
+							 - [售价 <span class="xw1">{$val['rate']}</span> 金钱]
+							 <!--{/if}-->
+							 <!--{if $val['elite']}-->
+							 <img src="{$domain_resource}/images/digest_1.gif" align="absmiddle" alt="digest" title="精华帖" />
+							 <!--{/if}-->
+							 <!--{if $val['addtime']>$newt}-->
+							 <a href="detail.php?id={$val['id']}#lastpost" class="xi1">New</a>
+							 <!--{/if}-->
+							</th>
+							<td class="by">
+							<cite>${getUserName($val['authorid'])}</cite>
+							<em><span class="xi1">${formatTime($val['addtime'])}</span></em>
+							</td>
+							<td class="num"><a href="detail.php?id={$val['id']}" class="xi2">{$val['replycount']}</a><em>{$val['hits']}</em></td>
+							<td class="by">
+							${creatLast(getListUName($val['id']))}
+							</td>
+						</tr>
+					<!--{/loop}-->
+				</table>
+				</form>
+				</div>
+				</div>
+				
+				<div class="bm bw0 pgs cl">
+				<span  class="pgb y"><a href="index.php">返&nbsp;回</a></span>
+				<a href="addc.php?classid={$OnCid}" id="newspecialtmp" title="发新帖"><img src="{$domain_resource}/images/pn_post.png" alt="发新帖" /></a></div>
+				<div style="width:800px; margin:0 auto; padding:10px 0px; text-align:right">
+				${fpage($zCount,$linum,[8,3,4,5,6,7,0,1,2])}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--LIST end-->
+
+<!--FOOT start-->
+<!--{include footer.html}-->
+<!--FOOT end-->
+</body>
+</html>
+

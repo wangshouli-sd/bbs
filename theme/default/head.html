@@ -1,0 +1,81 @@
+<div id="hd">
+	<div class="wp">
+		<div class="hdc cl">
+			<h2><a href="./" title="{$title}"><img src="{$domain_resource}/images/logo.jpg" height="80" border="0" /></a></h2>
+			<!--{if $thispage!='logout.php'}-->
+				<!--{if $_COOKIE['uid']}-->
+				<div id="um">
+					<div class="avt y"><a href="home_tx.php"><img src="{$GGpicture}" /></a></div>
+					<p>
+					<strong class="vwmy"><a href="home.php" target="_blank">{$_COOKIE['username']}</a></strong>
+					<span class="pipe">|</span><a href="home.php">设置</a>
+					<!--{if $_COOKIE['udertype']}-->
+					<span class="pipe">|</span><a href="admin.php" target="_blank">管理中心</a>
+					<!--{/if}-->
+					<span class="pipe">|</span><a href="logout.php">退出</a>
+					</p>
+					<p>
+					<a id="extcreditmenu" href="#">积分: {$GGgrade}</a>
+					<span class="pipe">|</span>用户权限: ${userGroup($_COOKIE['udertype'])}
+					</p>
+				</div>
+				<!--{else}-->
+				<form method="post" autocomplete="off" id="lsform" action="login.php">
+				<div class="fastlg cl">
+					<div class="y pns">
+						<table cellspacing="0" cellpadding="0">
+							<tr>
+								<td><span class="ftid">用户名</span></td>
+								<td><input type="text" name="username" value="{$_COOKIE['username']}" id="ls_username" autocomplete="off" class="px vm" /></td>
+								<td class="fastlg_l">
+									<label for="ls_cookietime"><input type="checkbox" name="cookietime" id="ls_cookietime" class="pc" value="true" />自动登录</label>
+								</td>
+								<td>&nbsp;<a href="getpass.php">找回密码</a></td>
+							</tr>
+							<tr>
+								<td><label for="ls_password" class="z psw_w">密码</label></td>
+								<td><input type="password" name="password" id="ls_password" class="px vm" autocomplete="off" /></td>
+								<td class="fastlg_l"><button type="submit" class="pn vm" name="loginsubmit" value="true" style="width:75px;"><em>登录</em></button></td>
+								<td>&nbsp;<a href="reg.php" class="xi2 xw1">立即注册</a></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				</form>
+				<!--{/if}-->
+			<!--{/if}-->
+		</div>
+	
+		<div id="nv">
+			<ul>	
+				<li <!--{if empty($bigId)}-->class="a"<!--{/if}--> id="mn_forum" ><a href="index.php" hidefocus="true" title="{$web_name}">首页</a><span>{$web_name}</span></li>
+				<!--{loop $headMenu $hmVal}-->
+				<li <!--{if $bigId == $hmVal['cid']}-->class="a"<!--{/if}--> id="mn_home" ><a href="index.php?bigid={$hmVal['cid']}" hidefocus="true" title="Space">{$hmVal['classname']}</a></li>
+				<!--{/loop}-->
+				
+			</ul>
+		</div>
+		
+		<div id="scbar" class="cl">
+			<form id="scbar_form" method="get" autocomplete="off" action="search.php" target="_blank">
+			<table cellspacing="0" cellpadding="0">
+				<tr>
+					<td class="scbar_icon_td"></td>
+					<td class="scbar_txt_td"><input type="text" name="keywords" id="scbar_txt" onfocus="if(this.value=='请输入搜索内容'){this.value='';this.style.color='#666';}" onblur="if(this.value==''){this.value='请输入搜索内容';this.style.color='#ccc';}" value="请输入搜索内容" style="color:#CCCCCC" autocomplete="off" /></td>
+					<td class="scbar_btn_td">
+						<button type="submit" name="searchsubmit" id="scbar_btn" class="pn pnc" value="true"><strong class="xi2 xs2">搜索</strong></button>
+					</td>
+					<td class="scbar_hot_td">
+						<div id="scbar_hot">
+							<strong class="xw1">热搜: </strong>
+							<!--{loop $keyWords $kwVal}-->
+							<a href="search.php?keywords={$kwVal}" target="_blank" class="xi2">{$kwVal}</a>
+							<!--{/loop}-->
+						</div>
+					</td>
+				</tr>
+			</table>
+			</form>
+		</div>
+	</div>
+</div>

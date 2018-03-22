@@ -1,0 +1,388 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns="http://www.w3.org/1999/xhtml">
+	<HEAD>
+		<TITLE>Discuz! Board 管理中心</TITLE>
+		<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+		<META name=Copyright content="Comsenz Inc.">
+		<LINK rel=stylesheet type=text/css href="{$domain_resource}/admin/admincp.css" media=all>
+		<SCRIPT type=text/javascript src="{$domain_resource}/admin/common.js"></SCRIPT>
+	</HEAD>
+	<BODY style="MARGIN: 0px" scroll=no>
+		<DIV id=append_parent></DIV>
+		<TABLE id=frametable cellSpacing=0 cellPadding=0 width="100%" height="100%">
+		  		<TR>
+					<TD height=90 colSpan=2>
+					  <DIV class=mainhd><A class=logo href="admin_index.php">Discuz! 
+					  Administrator's Control Panel</A> 
+					  <DIV id=frameuinfo class=uinfo>
+					  <P>你好, 创始人 <EM>{$_SESSION['username']}</EM> [<A 
+					  href="admin_logout.php" target=_top>退出</A>]</P>
+					  <P class=btnlink><A href="index.php" target=_blank>站点首页</A></P></DIV>
+					  <DIV class=navbg></DIV>
+					  <DIV class=nav style="margin-top:30px;">
+						  <UL id=topmenu>
+							<LI>
+								<EM>
+								<A hideFocus id=header_index onMouseOver="previewheader('index')" onmouseout=previewheader() onClick="toggleMenu('index', 'admin_main.php');doane(event);" href="admin_index.php">&nbsp;站点信息&nbsp;</A>
+								</EM>
+							</LI>
+							<LI>
+								<EM>
+									<A hideFocus id=header_global onMouseOver="previewheader('global')" onmouseout=previewheader() onClick="toggleMenu('global', 'admin_member.php');doane(event);" href="admin_member.php">&nbsp;用户管理&nbsp;</A>
+								</EM>
+							</LI>
+							<LI>
+								<EM>
+									<A hideFocus id=header_style onMouseOver="previewheader('style')" onmouseout=previewheader() onClick="toggleMenu('style', 'admin_category.php');doane(event);" href="admin_category.php">&nbsp;版块管理&nbsp;</A>
+								</EM>
+							</LI>
+							<LI>
+								<EM>
+								<A hideFocus id=header_topic onMouseOver="previewheader('topic')" onmouseout=previewheader() onClick="toggleMenu('topic', 'admin_detail.php');doane(event);" href="admin_detail.php">&nbsp;帖子管理&nbsp;</A>
+								</EM>
+							</LI>
+							</UL>
+						  <DIV class=navbd></DIV>
+					  </DIV>
+					  </DIV>
+					 </TD>
+				</TR>
+				<TR>
+					<TD class=menutd vAlign=top width=160>
+						<DIV id=leftmenu class=menu>
+							<UL style="DISPLAY: none" id=menu_index>
+								<LI>
+									<A hideFocus href="admin_main.php" target=main><EM title=新窗口打开 onclick=menuNewwin(this)></EM>站点信息</A>
+								</LI>
+								<LI>
+									<A hideFocus href="admin_link.php" target=main><EM title=新窗口打开 onclick=menuNewwin(this)></EM>友情链接</A>
+								</LI>
+							</UL>
+							<UL style="DISPLAY: none" id=menu_global>
+								<LI><A hideFocus href="admin_member.php" target=main><EM title=新窗口打开 onclick=menuNewwin(this)></EM>编辑用户</A></LI>
+								<LI><A hideFocus href="admin_lock_ip.php" target=main><EM title=新窗口打开 onclick=menuNewwin(this)></EM>禁止IP</A></LI>
+							</UL>
+							<UL style="DISPLAY: none" id=menu_style>
+								<LI><A hideFocus href="admin_category.php" target=main><EM title=新窗口打开 onclick=menuNewwin(this)></EM>管理版块</A></LI>
+								<LI><A hideFocus href="admin_category_add.php" target=main><EM title=新窗口打开 onclick=menuNewwin(this)></EM>添加版块</A></LI>
+							</UL>
+							<UL style="DISPLAY: none" id=menu_topic>
+								<LI><A hideFocus href="admin_detail.php" target=main><EM title=新窗口打开 onclick=menuNewwin(this)></EM>帖子管理</A></LI>
+								<LI><A hideFocus href="admin_detail_del.php" target=main><EM title=新窗口打开 onclick=menuNewwin(this)></EM>帖子回收站</A></LI>
+								<LI><A hideFocus href="admin_detail_hf.php" target=main><EM title=新窗口打开 onclick=menuNewwin(this)></EM>回帖管理</A></LI>
+								<LI><A hideFocus href="admin_detail_hf_del.php" target=main><EM title=新窗口打开 onclick=menuNewwin(this)></EM>回帖回收站</A></LI>
+							</UL>
+						</DIV>
+					</TD>
+					<TD class=mask vAlign=top width="100%">
+						<IFRAME style="OVERFLOW: visible" id=main height="100%" src="admin_main.php" frameBorder=0 width="100%" name=main scrolling=yes></IFRAME>
+					</TD>
+				</TR>
+		</TABLE>
+		<DIV style="DISPLAY: none" id=scrolllink>
+			<SPAN onclick=menuScroll(1)><IMG src="{$domain_resource}/admin/scrollu.gif"></SPAN><SPAN onclick=menuScroll(2)><IMG src="{$domain_resource}/admin/scrolld.gif"></SPAN>
+		</DIV>
+		<DIV class=copyright>
+			<P>Powered by <A href="" target=_blank>{$web_btm}</A> V2</P>
+			<P>© 2012, <A href="" target=_blank>{$web_btm} Inc.</A></P>
+		</DIV>
+		<DIV style="DISPLAY: none" id=cpmap_menu class=custom>
+			<DIV id=cmain class=cmain></DIV>
+			<DIV class=cfixbd></DIV>
+		</DIV>
+		<SCRIPT type=text/JavaScript>
+			var cookiepre = 'uq9K_2132_', cookiedomain = '', cookiepath = '/';
+			var headers = new Array('index','global','style','topic'), admincpfilename = '', menukey = '';
+			function switchheader(key) {
+				if(!key || !$('header_' + key)) {
+					return;
+				}
+				for(var k in top.headers) {
+					if($('menu_' + headers[k])) {
+						$('menu_' + headers[k]).style.display = headers[k] == key ? '' : 'none';
+					}
+				}
+				var lis = $('topmenu').getElementsByTagName('li');
+				for(var i = 0; i < lis.length; i++) {
+					if(lis[i].className == 'navon') lis[i].className = '';
+				}
+				$('header_' + key).parentNode.parentNode.className = 'navon';
+			}
+			var headerST = null;
+			function previewheader(key) {
+				if(key) {
+					headerST = setTimeout(function() {
+						for(var k in top.headers) {
+							if($('menu_' + headers[k])) {
+								$('menu_' + headers[k]).style.display = headers[k] == key ? '' : 'none';
+							}
+						}
+						var hrefs = $('menu_' + key).getElementsByTagName('a');
+						for(var j = 0; j < hrefs.length; j++) {
+							hrefs[j].className = '';
+						}
+					}, 1000);
+				} else {
+					clearTimeout(headerST);
+				}
+			}
+			function toggleMenu(key, url) {
+				menukey = key;
+				switchheader(key);
+				if(url) {
+					//parent.main.location = admincpfilename + '?action=' + url;
+					parent.main.location = url;
+					var hrefs = $('menu_' + key).getElementsByTagName('a');
+					for(var j = 0; j < hrefs.length; j++) {
+						hrefs[j].className = j == (key == 'plugin' ? 1 : 0) ? 'tabon' : '';
+					}
+				}
+				if(key == 'uc') {
+					parent.main.location = $('header_uc').href;
+				}
+				setMenuScroll();
+			}
+			function setMenuScroll() {
+				$('frametable').style.width = document.body.offsetWidth < 1000 ? '1000px' : '100%';
+				var obj = $('menu_' + menukey);
+				if(!obj) {
+					return;
+				}
+				var scrollh = document.body.offsetHeight - 160;
+				obj.style.overflow = 'visible';
+				obj.style.height = '';
+				$('scrolllink').style.display = 'none';
+				if(obj.offsetHeight + 150 > document.body.offsetHeight && scrollh > 0) {
+					obj.style.overflow = 'hidden';
+					obj.style.height = scrollh + 'px';
+					$('scrolllink').style.display = '';
+				}
+			}
+			function resizeHeadermenu() {
+				var lis = $('topmenu').getElementsByTagName('li');
+				var maxsize = $('frameuinfo').offsetLeft - 160, widths = 0, moi = -1, mof = '';
+				if($('menu_mof')) {
+					$('topmenu').removeChild($('menu_mof'));
+				}
+				if($('menu_mof_menu')) {
+					$('append_parent').removeChild($('menu_mof_menu'));
+				}
+				for(var i = 0; i < lis.length; i++) {
+					widths += lis[i].offsetWidth;
+					if(widths > maxsize) {
+						lis[i].style.visibility = 'hidden';
+						var sobj = lis[i].childNodes[0].childNodes[0];
+						if(sobj) {
+							mof += '<a href="'+ sobj.getAttribute('href') + '" onclick="$(\'' + sobj.id + '\').onclick()">&rsaquo; ' + sobj.innerHTML + '</a><br style="clear:both" />';
+						}
+					} else {
+						lis[i].style.visibility = 'visible';
+					}
+				}
+				if(mof) {
+					for(var i = 0; i < lis.length; i++) {
+						if(lis[i].style.visibility == 'hidden') {
+							moi = i;
+							break;
+						}
+					}
+					mofli = document.createElement('li');
+					mofli.innerHTML = '<em><a href="javascript:;">&raquo;</a></em>';
+					mofli.onmouseover = function () { showMenu({'ctrlid':'menu_mof','pos':'43'}); }
+					mofli.id = 'menu_mof';
+					$('topmenu').insertBefore(mofli, lis[moi]);
+					mofmli = document.createElement('li');
+					mofmli.className = 'popupmenu_popup';
+					mofmli.style.width = '150px';
+					mofmli.innerHTML = mof;
+					mofmli.id = 'menu_mof_menu';
+					mofmli.style.display = 'none';
+					$('append_parent').appendChild(mofmli);
+				}
+			}
+			function menuScroll(op, e) {
+				var obj = $('menu_' + menukey);
+				var scrollh = document.body.offsetHeight - 160;
+				if(op == 1) {
+					obj.scrollTop = obj.scrollTop - scrollh;
+				} else if(op == 2) {
+					obj.scrollTop = obj.scrollTop + scrollh;
+				} else if(op == 3) {
+					if(!e) e = window.event;
+					if(e.wheelDelta <= 0 || e.detail > 0) {
+						obj.scrollTop = obj.scrollTop + 20;
+					} else {
+						obj.scrollTop = obj.scrollTop - 20;
+					}
+				}
+			}
+			function menuNewwin(obj) {
+				window.open(obj.parentNode.href);
+				doane();
+			}
+			function initCpMenus(menuContainerid) {
+				var key = '', lasttabon1 = null, lasttabon2 = null, hrefs = $(menuContainerid).getElementsByTagName('a');
+				for(var i = 0; i < hrefs.length; i++) {
+					if(menuContainerid == 'leftmenu' && 'action=index'.indexOf(hrefs[i].href.substr(hrefs[i].href.indexOf(admincpfilename + '?') + admincpfilename.length + 1)) != -1) {
+						if(lasttabon1) {
+							lasttabon1.className = '';
+						}
+						if(hrefs[i].parentNode.parentNode.tagName == 'OL') {
+							hrefs[i].parentNode.parentNode.style.display = '';
+							hrefs[i].parentNode.parentNode.parentNode.className = 'lsub desc';
+							key = hrefs[i].parentNode.parentNode.parentNode.parentNode.parentNode.id.substr(5);
+						} else {
+							key = hrefs[i].parentNode.parentNode.id.substr(5);
+						}
+						hrefs[i].className = 'tabon';
+						lasttabon1 = hrefs[i];
+					}
+					if(!hrefs[i].getAttribute('ajaxtarget')) hrefs[i].onclick = function() {
+						if(menuContainerid != 'custommenu') {
+							var lis = $(menuContainerid).getElementsByTagName('li');
+							for(var k = 0; k < lis.length; k++) {
+								if(lis[k].firstChild && lis[k].firstChild.className != 'menulink') {
+									if(lis[k].firstChild.tagName != 'DIV') {
+										lis[k].firstChild.className = '';
+									} else {
+										var subid = lis[k].firstChild.getAttribute('sid');
+										if(subid) {
+											var sublis = $(subid).getElementsByTagName('li');
+											for(var ki = 0; ki < sublis.length; ki++) {
+												if(sublis[ki].firstChild && sublis[ki].firstChild.className != 'menulink') {
+													sublis[ki].firstChild.className = '';
+												}
+											}
+										}
+									}
+								}
+							}
+							if(this.className == '') this.className = menuContainerid == 'leftmenu' ? 'tabon' : '';
+						}
+						if(menuContainerid != 'leftmenu') {
+							var hk, currentkey;
+							var leftmenus = $('leftmenu').getElementsByTagName('a');
+							for(var j = 0; j < leftmenus.length; j++) {
+								if(leftmenus[j].parentNode.parentNode.tagName == 'OL') {
+									hk = leftmenus[j].parentNode.parentNode.parentNode.parentNode.parentNode.id.substr(5);
+								} else {
+									hk = leftmenus[j].parentNode.parentNode.id.substr(5);
+								}
+								if(this.href.indexOf(leftmenus[j].href) != -1) {
+									if(lasttabon2) {
+										lasttabon2.className = '';
+									}
+									leftmenus[j].className = 'tabon';
+									if(leftmenus[j].parentNode.parentNode.tagName == 'OL') {
+										leftmenus[j].parentNode.parentNode.style.display = '';
+										leftmenus[j].parentNode.parentNode.parentNode.className = 'lsub desc';
+									}
+									lasttabon2 = leftmenus[j];
+									if(hk != 'index') currentkey = hk;
+								} else {
+									leftmenus[j].className = '';
+								}
+							}
+							if(currentkey) toggleMenu(currentkey);
+							hideMenu();
+						}
+					}
+				}
+				return key;
+			}
+			function lsub(id, obj) {
+				display(id);
+				obj.className = obj.className != 'lsub' ? 'lsub' : 'lsub desc';
+				if(obj.className != 'lsub') {
+					setcookie('cpmenu_' + id, '');
+				} else {
+					setcookie('cpmenu_' + id, 1, 31536000);
+				}
+				setMenuScroll();
+			}
+			var header_key = initCpMenus('leftmenu');
+			toggleMenu(header_key ? header_key : 'index');
+			function initCpMap() {
+				var ul, hrefs, s = '', count = 0;
+				for(var k in headers) {
+					if(headers[k] != 'index' && headers[k] != 'uc') {
+						s += '<td valign="top"><ul class="cmblock"><li><h4>' + $('header_' + headers[k]).innerHTML + '</h4></li>';
+						ul = $('menu_' + headers[k]);
+						if(!ul) {
+							continue;
+						}
+						hrefs = ul.getElementsByTagName('a');
+						for(var i = 0; i < hrefs.length; i++) {
+							s += '<li><a href="' + hrefs[i].href + '" target="' + hrefs[i].target + '" k="' + headers[k] + '">' + hrefs[i].innerHTML + '</a></li>';
+						}
+						s += '<li></li></ul></td>';
+						count++;
+					}
+				}
+				var width = (count > 11 ? 11 : count) * 80;
+				s = '<div class="cnote" style="width:' + width + 'px"><span class="right"><a href="###" class="flbc" onclick="hideMenu();return false;"></a></span><h3>管理中心导航</h3></div>' +
+					'<div class="cmlist" style="width:' + width + 'px"><table id="mapmenu" cellspacing="0" cellpadding="0" ><tr>' + s +
+					'</tr></table></div>';
+				$('cmain').innerHTML = s;
+				$('cmain').style.width = (width > 1000 ? 1000 : width) + 'px';
+			}
+			initCpMap();
+			initCpMenus('mapmenu');
+			var cmcache = false;
+			function showMap() {
+				showMenu({'ctrlid':'cpmap','evt':'click', 'duration':3, 'pos':'00'});
+			}
+			function resetEscAndF5(e) {
+				e = e ? e : window.event;
+				actualCode = e.keyCode ? e.keyCode : e.charCode;
+				if(actualCode == 27) {
+					if($('cpmap_menu').style.display == 'none') {
+						showMap();
+					} else {
+						hideMenu();
+					}
+				}
+				if(actualCode == 116 && parent.main) {
+					parent.main.location.reload();
+					if(document.all) {
+						e.keyCode = 0;
+						e.returnValue = false;
+					} else {
+						e.cancelBubble = true;
+						e.preventDefault();
+					}
+				}
+			}
+			function uc_left_menu(uc_menu_data) {
+				var leftmenu = $('menu_uc');
+				leftmenu.innerHTML = '';
+				var html_str = '';
+				for(var i=0;i<uc_menu_data.length;i+=2) {
+					html_str += '<li><a href="'+uc_menu_data[(i+1)]+'" hidefocus="true" onclick="uc_left_switch(this)" target="main"><em onclick="menuNewwin(this)" title="新窗口打开"></em>'+uc_menu_data[i]+'</a></li>';
+				}
+				leftmenu.innerHTML = html_str;
+			}
+			var uc_left_last = null;
+			function uc_left_switch(obj) {
+				if(uc_left_last) {
+					uc_left_last.className = '';
+				}
+				obj.className = 'tabon';
+				uc_left_last = obj;
+			}
+			function uc_modify_sid(sid) {
+				$('header_uc').href = '';
+			}
+		
+			_attachEvent(document.documentElement, 'keydown', resetEscAndF5);
+			_attachEvent(window, 'resize', setMenuScroll, document);
+			_attachEvent(window, 'resize', resizeHeadermenu, document);
+			if(BROWSER.ie){
+				$('leftmenu').onmousewheel = function(e) { menuScroll(3, e) };
+			} else {
+				$('leftmenu').addEventListener("DOMMouseScroll", function(e) { menuScroll(3, e) }, false);
+			}
+			resizeHeadermenu();
+		</SCRIPT>
+	</BODY>
+</HTML>

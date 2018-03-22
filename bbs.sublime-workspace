@@ -1,0 +1,414 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"def",
+				"define"
+			],
+			[
+				"fore",
+				"foreach	foreach …"
+			],
+			[
+				"js",
+				"json_encode"
+			],
+			[
+				"json",
+				"json_decode"
+			],
+			[
+				"acc",
+				"accountId"
+			],
+			[
+				"open",
+				"openId"
+			],
+			[
+				"op",
+				"openId"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 27.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/yhsong/Documents/Project/bbs/list.php",
+		"/Users/yhsong/Documents/Project/bbs/helpers/page.php",
+		"/Users/yhsong/Documents/Project/bbs/detail.php",
+		"/Users/yhsong/Documents/Project/bbs/addc.php",
+		"/Users/yhsong/Documents/Project/bbs/theme/default/list.html",
+		"/Users/yhsong/Documents/Project/bbs/theme/default/head.html",
+		"/Users/yhsong/Documents/Project/bbs/theme/default/detail.html",
+		"/Users/yhsong/Documents/Project/bbs/theme/default/addc.html",
+		"/Users/yhsong/Documents/Project/bbs/login.php",
+		"/Users/yhsong/Documents/Project/bbs/notice.php",
+		"/Users/yhsong/Documents/Project/bbs/logout.php",
+		"/Users/yhsong/Documents/Project/bbs/verify.php",
+		"/Users/yhsong/Documents/Project/bbs/search.php",
+		"/Users/yhsong/Documents/Project/bbs/reg.php",
+		"/Users/yhsong/Documents/Project/bbs/theme/default/admin_detail_del.html",
+		"/Users/yhsong/Documents/Project/bbs/theme/default/admin_detail.html",
+		"/Users/yhsong/Documents/Project/bbs/theme/default/admin_detail_hf.html",
+		"/Users/yhsong/Documents/Project/bbs/theme/default/admin_detail_hf_del.html",
+		"/Users/yhsong/Documents/Project/bbs/theme/default/search.html",
+		"/Users/yhsong/Documents/Project/bbs/admin_detail.php",
+		"/Users/yhsong/Documents/Project/bbs/admin_detail_del.php",
+		"/Users/yhsong/Documents/Project/bbs/admin_detail_hf.php",
+		"/Users/yhsong/Documents/Project/bbs/admin_detail_hf_del.php",
+		"/Users/yhsong/Documents/Project/bbs/admin.php",
+		"/Users/yhsong/Documents/Project/bbs/admin_category.php",
+		"/Users/yhsong/Documents/Project/bbs/admin_category_add.php",
+		"/Users/yhsong/Documents/Project/bbs/admin_link.php",
+		"/Users/yhsong/Documents/Project/bbs/admin_lock_ip.php",
+		"/Users/yhsong/Documents/Project/bbs/admin_logout.php",
+		"/Users/yhsong/Documents/Project/bbs/admin_member_show.php",
+		"/Users/yhsong/Documents/Project/bbs/home_pass.php",
+		"/Users/yhsong/Documents/Project/bbs/home_qm.php",
+		"/Users/yhsong/Documents/Project/bbs/index.php",
+		"/Users/yhsong/Documents/Project/bbs/home_tx.php",
+		"/Users/yhsong/Documents/Project/bbs/common/admin_common.php",
+		"/Users/yhsong/Documents/Project/bbs/home.php",
+		"/Users/yhsong/Documents/Project/bbs/theme/default/home.html",
+		"/Users/yhsong/Documents/Project/bbs/theme/default/admin_member_show.html",
+		"/Users/yhsong/Documents/Project/bbs/theme/default/home_tx.html",
+		"/Users/yhsong/Documents/Project/bbs/helpers/fileupload.php",
+		"/Users/yhsong/Documents/Project/bbs/config/config.php",
+		"/Users/yhsong/Documents/Project/bbs/layer.php",
+		"/Users/yhsong/Documents/Project/bbs/getpass.php",
+		"/Users/yhsong/Documents/Project/bbs/close.php",
+		"/Users/yhsong/Documents/Project/bbs/theme/default/notice.html",
+		"/Users/yhsong/Documents/Project/bbs/helpers/mysql.php",
+		"/Users/yhsong/Documents/Project/bbs/theme/default/header.html",
+		"/Users/yhsong/Documents/Project/bbs/theme/default/layer.html",
+		"/Users/yhsong/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/yhsong/Documents/Project/bbs/helpers/func.php",
+		"/Users/yhsong/Documents/Project/bbs/theme/default/index.html",
+		"/Users/yhsong/Documents/Project/bbs/common/common.php",
+		"/Users/yhsong/Documents/Project/bbs/helpers/keywords.php",
+		"/Users/yhsong/Documents/Project/bbs/theme/default/admin_category.html",
+		"/Users/yhsong/Documents/Project/bbs/theme/default/admin_category_add.html",
+		"/Users/yhsong/Documents/Project/bbs/theme/default/admin_index.html",
+		"/Users/yhsong/Documents/Project/bbs/theme/default/admin_link.html",
+		"/Users/yhsong/Documents/Project/bbs/theme/default/admin_lock_ip.html",
+		"/Users/yhsong/Documents/Project/bbs/theme/default/admin_login.html",
+		"/Users/yhsong/Documents/Project/bbs/theme/default/admin_main.html",
+		"/Users/yhsong/Documents/Project/bbs/theme/default/admin_member.html",
+		"/Users/yhsong/Documents/Project/bbs/config/database.php",
+		"/Users/yhsong/Documents/Project/bbs/helpers/img.php",
+		"/Users/yhsong/Documents/Project/bbs/helpers/code.php",
+		"/Users/yhsong/Documents/Project/bbs/theme/default/footer.html",
+		"/Users/yhsong/Documents/Project/bbs/helpers/search.php",
+		"/Users/yhsong/Documents/Project/bbs/theme/default/top.html",
+		"/Users/yhsong/Documents/Project/bbs/helpers/mytpl.php",
+		"/Users/yhsong/Documents/Project/bbs/config/website.php",
+		"/Users/yhsong/Documents/Project/func_bbs/sdkis/app/Http/Controllers/Auth/AuthController.php",
+		"/Users/yhsong/Documents/Project/func_bbs/sdkis/resources/views/app.blade.php",
+		"/Users/yhsong/Documents/Project/func_bbs/sdkis/resources/views/auth/login.blade.php",
+		"/Users/yhsong/Documents/Project/func_bbs/sdkis/app/Http/routes.php",
+		"/Users/yhsong/Documents/Project/func_bbs/sdkis/app/Http/Controllers/Controller.php",
+		"/Users/yhsong/Documents/Project/func_bbs/sdkis/app/Http/Controllers/Auth/PasswordController.php",
+		"/Users/yhsong/Documents/Project/func_bbs/sdkis/app/Http/Controllers/Admin/TemplateController.php",
+		"/Users/yhsong/Documents/Project/func_bbs/sdkis/app/Models/MstAdTemplates.php",
+		"/Users/yhsong/Documents/Project/func_bbs/sdkis/app/Repositories/TemplateRepository.php",
+		"/Users/yhsong/Documents/Project/func_bbs/sdkis/app/Repositories/._TemplateRepository.php",
+		"/Users/yhsong/Documents/Project/func_bbs/sdkis/app/Models/MstOpTemplateLogs.php",
+		"/Users/yhsong/Documents/Project/func_bbs/sdkis/app/Models/MstDimAdDisplaytypes.php",
+		"/Users/yhsong/Documents/Project/func_bbs/sdkis/app/Http/Requests/Request.php",
+		"/Users/yhsong/Documents/Project/func_bbs/sdkis/app/Http/Controllers/Admin/HomeController.php",
+		"/Users/yhsong/Documents/Project/func_bbs/sdkis/resources/views/auth/register.blade.php",
+		"/Users/yhsong/Documents/Project/func_bbs/sdkis/app/Http/Middleware/Authenticate.php",
+		"/Users/yhsong/Documents/Project/func_bbs/sdkis/config/auth.php",
+		"/Users/yhsong/Documents/Project/func_bbs/sdkis/app/User.php",
+		"/Users/yhsong/Documents/Project/func_bbs/sdkis/database/factories/ModelFactory.php",
+		"/Users/yhsong/Documents/Project/func_bbs/sdkis/config/app.php",
+		"/Users/yhsong/Documents/Project/func_bbs/sdkis/app/Http/Middleware/EncryptCookies.php",
+		"/Users/yhsong/Documents/Project/func_bbs/sdkis/resources/views/welcome.blade.php",
+		"/Users/yhsong/Documents/Project/func_bbs/sdkis/app/Http/Controllers/HomeController.php",
+		"/Users/yhsong/Documents/Project/func_bbs/laravel/resources/views/welcome.blade.php",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/detail.php",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/theme/default/detail.html",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/common/user.php",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/common/func.php",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/common/mysql.php",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/addc.php",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/admin.php",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/admin_member_show.php",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/getpass.php",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/home_pass.php",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/home_qm.php",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/login.php",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/reg.php",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/list.php",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/compiled/detail.php",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/compiled/head.php",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/theme/default/admin_member.html",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/theme/default/head.html",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/notice.php",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/search.php",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/admin_category.php",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/admin_category_add.php",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/admin_detail.php",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/admin_detail_del.php",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/admin_detail_hf.php",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/admin_detail_hf_del.php",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/admin_index.php",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/admin_link.php",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/admin_lock_ip.php",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/admin_main.php",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/admin_member.php",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/home.php",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/home_tx.php",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/layer.php",
+		"/Users/yhsong/Documents/Project/func_bbs/bbs/common/mytpl.php"
+	],
+	"find":
+	{
+		"height": 70.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+			"/Users/yhsong/Documents/Project/bbs",
+			"/Users/yhsong/Documents/Project/bbs/theme",
+			"/Users/yhsong/Documents/Project/bbs",
+			"/Users/yhsong/Documents/Project/func_bbs/sdkis",
+			"/Users/yhsong/Documents/Project/func_bbs/bbs",
+			"/Users/yhsong/Documents/Project/func_bbs"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"$BCategory",
+			"$Category",
+			"$TiaoJ",
+			"$ClassId",
+			"$cSearch",
+			"$cSearch=DBf",
+			"$Csearch",
+			"$toTime=",
+			"$url=",
+			"$url='",
+			"$msg='",
+			"$ToTime",
+			"$Url",
+			"$Msg",
+			"Dbirthday",
+			"Mbirthday",
+			"Ybirthday",
+			"jq",
+			"$page",
+			"$ToTime",
+			"{$domain_resource}/public/",
+			"{$domain_resource}/public",
+			"saveImg",
+			"static/",
+			"$time_now",
+			"email",
+			"电梯",
+			"{userGroup($hval['udertype'])}$",
+			"{userGroup($U_dertype)}",
+			"电梯",
+			"$this",
+			"str_magic",
+			"$userclass->",
+			"userGroup",
+			"getListUName",
+			"$tpl -> ",
+			"$conn->",
+			"__parse",
+			"$this->",
+			"$this-》",
+			"$this->",
+			"$conn->",
+			"static",
+			"bool",
+			"controller",
+			"');\n",
+			"*/\n",
+			"内",
+			"symfony",
+			"accountId",
+			"\");\n",
+			");\n",
+			";\n",
+			"    \n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"$parentCategory",
+			"$category",
+			"$condition",
+			"$classId",
+			"$cSearch = dbF",
+			"$cSearch",
+			"$toTime = ",
+			"$url = ",
+			"$url = '",
+			"$msg = '",
+			"$toTime",
+			"$url",
+			"$msg",
+			"dBirthday",
+			"mBirthday",
+			"yBirthday",
+			"$toTime",
+			"{$domain_resource}/",
+			"{$domain_resource}/public/",
+			"strMagic",
+			"",
+			"public"
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 69.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "bbs.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 269.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

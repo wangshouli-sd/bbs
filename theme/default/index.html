@@ -1,0 +1,165 @@
+<!--{include header.html}-->
+<!--TOP start-->
+<!--{include top.html}-->
+<!--TOP end-->
+
+<!--HEAD start-->
+<!--{include head.html}-->
+<!--HEAD end-->
+
+<!--CONTENT start-->
+<div id="wp" class="wp">
+	<div id="pt" class="bm cl">
+		<div class="z">
+			<a href="./" class="nvhm" title="{$title}">{$title}</a><em>&raquo;</em><a href="index.php">论坛</a><!--{if $bigid}--><em>&raquo;</em><a href="index.php?bigid={$LTmenu[0]['cid']}">{$LTmenu[0]['classname']}</a><!--{/if}-->
+		</div>
+		<div class="z"></div>
+	</div>
+
+	<div id="ct" class="wp cl">
+		<div id="chart" class="bm bw0 cl">
+			<div class="y">
+				<p class="chart z">
+				帖子: <em>{$tzCount}</em><span class="pipe">|</span>
+				会员: <em>{$userC}</em><span class="pipe">|</span>
+				欢迎新会员: <em>{$uName}</em>
+				</p>
+			</div>
+		</div>
+	
+		<div class="mn">
+			<!--{if $bigid}-->
+			<div class="fl bm">
+				<!--板块 start-->
+				<div class="bm bmw  cl">
+					<div class="bm_h cl">
+						<h2><a href="index.php?bigid={$LTmenu[0]['cid']}">{$LTmenu[0]['classname']}</a></h2>
+					</div>
+					<div id="category_1" class="bm_c">
+						<table cellspacing="0" cellpadding="0" class="fl_tb">
+							<!--{loop $LTsMenu $key $val}-->
+							<tr <!--{if $key!=0}--> class="fl_row"<!--{/if}-->>
+								<td class="fl_icn" >
+									<a href="list.php?classid={$val['cid']}"><img src="{$val['classpic']}" alt="{$val['classname']}" /></a>
+								</td>
+								<td>
+									<h2><a href="list.php?classid={$val['cid']}" style="color:{$val['namestyle']}">{$val['classname']}</a></h2>
+									<p class="xg2">{$val['description']}</p>
+									<!--{if !empty($val['compere'])}-->
+									<p>版主: <span class="xi2">${getUserName($val['compere'])}</span></p>
+									<!--{/if}-->
+								</td>
+								<td class="fl_i">
+									<span class="xi2">{$val['replycount']}</span><span class="xg1"> / {$val['motifcount']}</span>
+								</td>
+								<td class="fl_by">
+									<div>
+										${categoryLast($val['lastpost'])}
+									</div>
+								</td>
+							</tr>
+							<!--{/loop}-->
+						</table>
+					</div>
+				</div>
+				<!--板块 end-->
+			</div>
+			<!--{else}-->
+			<div class="fl bm">
+				<!--板块 start-->
+				<!--{loop $LTmenu $inde $bk}-->
+				<div class="bm bmw  cl">
+					<div class="bm_h cl">
+						<h2><a href="index.php?bigid={$bk['cid']}">{$bk['classname']}</a></h2>
+					</div>
+					<div id="category_1" class="bm_c">
+						<table cellspacing="0" cellpadding="0" class="fl_tb">
+							<!--{loop $LTsMenu $key $val}-->
+							<!--{if $val['parentid']==$bk['cid']}-->
+							<tr <!--{if $key!=0 && $key!=2}-->class="fl_row"<!--{/if}-->>
+								<td class="fl_icn" >
+									<a href="list.php?classid={$val['cid']}"><img src="{$val['classpic']}" alt="{$val['classname']}" /></a>
+								</td>
+								<td>
+									<h2><a href="list.php?classid={$val['cid']}" style="color:{$val['namestyle']}">{$val['classname']}</a></h2>
+									<p class="xg2">{$val['description']}</p>
+									<!--{if !empty($val['compere'])}-->
+									<p>版主: <span class="xi2">${getUserName($val['compere'])}</span></p>
+									<!--{/if}-->
+								</td>
+								<td class="fl_i">
+									<span class="xi2">{$val['replycount']}</span><span class="xg1"> / {$val['motifcount']}</span>
+								</td>
+								<td class="fl_by">
+									<div>
+									${categoryLast($val['lastpost'])}
+									</div>
+								</td>
+							</tr>
+							<!--{/if}-->
+							<!--{/loop}-->
+						</table>
+					</div>
+				</div>
+				<!--{/loop}-->
+				<!--板块 end-->
+			</div>
+			<!--{/if}-->
+			<!--<div id="online" class="bm oll">
+				<div class="bm_h">
+					<h3>
+						<strong><a href="#">在线会员</a></strong>
+						<span class="xs1">- <strong>1</strong> 人在线 - <strong>1</strong> 会员(<strong>0</strong> 隐身),
+						<strong>0</strong> 位游客 - 最高记录是 <strong>4</strong> 于 <strong>2012-4-17</strong>.</span>
+					</h3>
+				</div>
+				<dl id="onlinelist" class="bm_c">
+					<dt class="ptm pbm bbda">
+						<img src="{$domain_resource}/images/online_admin.gif" /> 管理员 &nbsp; &nbsp; &nbsp; 
+						<img src="{$domain_resource}/images/online_supermod.gif" /> 超级版主 &nbsp; &nbsp; &nbsp; 
+						<img src="{$domain_resource}/images/online_moderator.gif" /> 版主 &nbsp; &nbsp; &nbsp; 
+						<img src="{$domain_resource}/images/online_member.gif" /> 会员 &nbsp; &nbsp; &nbsp; 
+					</dt>
+					<dd class="ptm pbm">
+						<ul class="cl">
+							<li title="时间: 20:44">
+								<img src="{$domain_resource}/images/online_admin.gif" alt="icon" />
+								<a href="#">admin</a>
+							</li>
+						</ul>
+					</dd>
+				</dl>
+			</div>-->
+			<div class="bm lk">
+				<div id="category_lk" class="bm_c ptm">
+					<ul class="m mbn cl">
+						<!--{loop $imgUrl $index $iurl}-->
+						<li class="lk_logo mbm bbda cl">
+							<img src="{$iurl['logo']}" border="0" alt="{$iurl['name']}" />
+							<div class="lk_content z">
+								<h5><a href="{$iurl['url']}" target="_blank">{$iurl['name']}</a></h5>
+								<p>{$iurl['description']}</p>
+							</div>
+						<!--{/loop}-->
+					</ul>
+					
+					<ul class="x mbm cl">
+						<!--{loop $textUrl $tindex $turl}-->
+						<li><a href="{$turl['url']}" target="_blank" title="{$turl['name']}">{$turl['name']}</a></li>
+						<!--{/loop}-->
+					</ul>
+				</div>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+<!--CONTENT end-->
+
+<!--FOOT start-->
+<!--{include footer.html}-->
+<!--FOOT end-->
+</body>
+</html>
+
